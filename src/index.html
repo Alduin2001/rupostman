@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RuPostman</title>
+    <link rel="stylesheet" href="./bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <script src="./bootstrap-5.0.2-dist/js/bootstrap.min.js" sync></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <header class="bg-danger py-3">
+            <h1 class="text-center text-white">RuPostman</h1>
+        </header>
+        <section class="content py-4">
+            <form class="row g-3 align-items-center" id="form-submit">
+                <div class="col-3">
+                    <select class="form-select form-select-lg mb-3 text-white bg-primary" id="method">
+                        <option value="GET">GET</option>
+                        <option value="POST">POST</option>
+                        <option value="PUT">PUT</option>
+                        <option value="DELETE">DELETE</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <input type="text" class="form-control form-control-lg" id="url" placeholder="Enter URL">
+                </div>
+                <div class="col-md-3">
+                    <input type="submit" class="btn btn-primary btn-lg w-100 text-white" value="Submit">
+                </div>
+                <div class="col-12">
+                  <textarea class="form-control" rows="10" placeholder="Введите в формате JSON" id="json-data"></textarea>
+                </div>
+            </form>
+            
+            <div class="py-4">
+              <div class="d-flex justify-content-between">
+                <h1>JSON</h1>
+                <h1>Status code: <span class="text-success" id="status-code">200</span></h1>
+              </div>
+              <div class="alert alert-primary py-4" id="response">
+
+              </div>
+            </div>
+        </section>
+    </div>
+    <script src="./render.js" defer></script>
+</body>
+</html>
